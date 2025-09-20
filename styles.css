@@ -1,0 +1,159 @@
+/* Minimal, tasteful design */
+:root{
+  --bg: #0b1220;
+  --panel: #0f172a;
+  --ink: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #0ea5e9;
+  --brand-ink: #0b5aa3;
+  --ring: 0 0 0 3px rgba(14,165,233,.25);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", sans-serif;
+  color:var(--ink);
+  background: radial-gradient(1200px 600px at 75% -20%, rgba(14, 165, 233, .2), transparent 60%), 
+             linear-gradient(180deg, #0b1220, #0b1220 300px, #0c1627 100%);
+}
+a{color:var(--ink); text-decoration:none}
+a:focus{outline: none; box-shadow: var(--ring)}
+
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+.coming-soon {
+  display: inline-block;
+  background: #ddc7ba;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.7); /* dark transparent backdrop */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  z-index: 9999; /* ensure it’s above everything */
+  text-align: center;
+  padding: 20px;
+}
+
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-name{font-weight:800;font-size:1.1rem;letter-spacing:.2px}
+.logo{height:36px;width:auto}
+
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{opacity:.9}
+.nav .btn{margin-left:6px}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items:center;
+  gap:32px;
+  padding-top:40px;
+  padding-bottom:30px;
+}
+.hero h1{font-size: clamp(2.2rem, 5vw, 3.4rem); line-height:1.05; margin:0 0 10px}
+.lead{font-size: clamp(1rem, 2.2vw, 1.25rem); color:var(--muted); max-width:52ch}
+.cta-row{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:16px}
+
+.hero-art{position:relative; min-height: 420px}
+.phone{
+  position:relative;
+  width:min(340px, 90%);
+  margin: 0 auto;
+  border-radius: 28px;
+  background: #111827;
+  padding: 14px;
+  box-shadow: 0 20px 80px rgba(0,0,0,.5);
+  z-index:2;
+}
+.phone img{display:block; width:100%; border-radius: 18px; aspect-ratio: 9/19; object-fit: cover; background:#0f172a}
+.gradient-blob{
+  position:absolute; inset:auto 0 0 0; height: 60%; 
+  background: radial-gradient(closest-side, rgba(14,165,233,.25), transparent 70%);
+  filter: blur(40px);
+  z-index:1;
+}
+
+.features{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:18px;
+  padding: 30px 20px 10px;
+}
+.feature{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border: 1px solid rgba(148,163,184,.15);
+  border-radius: 14px;
+  padding:16px;
+  min-height: 150px;
+}
+.feature h3{margin:.4rem 0 .25rem;font-size:1.05rem}
+.feature p{margin:0;color:var(--muted);font-size:.98rem}
+.icon{font-size: 20px; opacity:.9}
+
+.admin .card{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border: 1px solid rgba(148,163,184,.15);
+  border-radius: 14px;
+  padding:20px;
+  margin-top:24px;
+}
+.admin h2{margin:0 0 .35rem}
+.admin p{margin:0 0 .75rem; color:var(--muted)}
+
+.site-footer{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  border-top: 1px solid rgba(148,163,184,.15);
+  margin-top: 40px;
+  padding-top: 16px;
+  padding-bottom: 40px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.footer-links{display:flex; gap:14px; flex-wrap: wrap}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:10px; padding:10px 14px; font-weight:600; line-height:1;
+  transition: transform .04s ease, box-shadow .2s ease, background .2s ease;
+  border: 1px solid rgba(148,163,184,.2);
+  background: rgba(255,255,255,.03);
+}
+.btn:hover{transform: translateY(-1px)}
+.btn:active{transform: translateY(0)}
+.btn-outline{background: transparent}
+.btn-primary{background: linear-gradient(180deg, #22d3ee, #0ea5e9); color:#081018; border-color: transparent}
+.btn-primary:hover{box-shadow: 0 10px 40px rgba(14,165,233,.35)}
+
+.store-badge img{height:40px; width:auto; display:block}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero{grid-template-columns: 1fr; padding-top:20px}
+  .hero-art{order:-1; min-height: 0}
+  .features{grid-template-columns: 1fr 1fr}
+}
+@media (max-width: 560px){
+  .features{grid-template-columns: 1fr}
+  .nav a:not(.btn){display:none}
+  .store-badge img{height:36px}
+}

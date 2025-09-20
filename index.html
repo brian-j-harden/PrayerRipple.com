@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrayerRipple — Pray together. See the ripple.</title>
+  <meta name="description" content="PrayerRipple helps people share prayer requests with friends and communities, stay connected, and celebrate praise reports." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PrayerRipple — Pray together. See the ripple." />
+  <meta property="og:description" content="Share prayer requests with friends and communities, track updates, and celebrate what God is doing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://prayerripple.com/og-image.png" />
+  <meta property="og:url" content="https://prayerripple.com" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PrayerRipple" />
+  <meta name="twitter:description" content="Pray together. See the ripple." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="PrayerRipple logo" class="logo" />
+      <span class="brand-name">PrayerRipple</span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#links">Get the app</a>
+      <a class="btn btn-outline" id="adminLogin" href="https://prayerripple.com/login">Admin Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <h1>Pray together.<br/>See the ripple.</h1>
+        <p class="lead">
+          A simple way to share prayer requests with friends and communities, keep track of updates, 
+          and celebrate praise reports.
+        </p>
+        <div class="cta-row" id="links">
+          <p class="coming-soon">📱 Available soon on the App Store & Google Play</p>
+          <!-- <a class="store-badge" href="https://apps.apple.com/app/id000000000" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.matthew1820.prayerripple" aria-label="Get it on Google Play">
+            <img src="assets/google-play-badge.svg" alt="Get it on Google Play" />
+          </a> -->
+          <a class="btn btn-primary" href="https://prayerripple.com/login">Admin Login</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="phone">
+          <img src="assets/app-mock.png" alt="PrayerRipple app mockup" />
+        </div>
+        <div class="gradient-blob"></div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <div class="feature">
+        <div class="icon">🙏</div>
+        <h3>Create & share requests</h3>
+        <p>Post a prayer request in seconds. Choose a calming color theme and (optionally) add a photo.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">👥</div>
+        <h3>Friends & communities</h3>
+        <p>Share with close friends or specific communities you belong to. You’re always in control.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📣</div>
+        <h3>Praise reports</h3>
+        <p>Close the loop by posting praise updates. Watch the ripple spread as people celebrate together.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h3>Thoughtful privacy</h3>
+        <p>Post anonymously, share globally, or keep it small—PrayerRipple respects your intent.</p>
+      </div>
+    </section>
+
+    <section class="admin container">
+      <div class="card">
+        <h2>Community administration</h2>
+        <p>
+          Manage community membership, roles, and settings from our web-based admin portal.
+          Need premium features? You can upgrade from the web app at any time.
+        </p>
+        <a class="btn btn-primary" href="https://prayerripple.com/login">Go to Admin</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year"></span> PrayerRipple • Happy Hardens Ministries, LLC</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:support@prayerripple.com">Support</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
